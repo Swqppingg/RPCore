@@ -28,3 +28,11 @@ If you already have one of the scripts, you can easily disable it in the config.
 Add the **RPCore** folder to your FiveM resources directory.\
 Edit your server.cfg and add "ensure **RPCore**"\
 Edit config.lua to be customized for your server.\
+
+
+
+
+
+
+
+![banner](https://i.imgur.com/GU3LSL2.png)
