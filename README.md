@@ -1,6 +1,6 @@
 # RPCore [STANDALONE]
-FiveM Script with alot of useful commands/scripts all in one\\
-Almost everything is customizable in the config.lua
+FiveM Script with alot of useful commands/scripts all in one\
+Almost everything is customizable in the config.lua\
 If you already have one of the scripts, you can easily disable it in the config.lua
 
 
