@@ -21,13 +21,13 @@ If you already have one of the scripts, you can easily disable it in the config.
 **Server List Uptime** - Adds a server convar with the server uptime\
 **No Grip** - When jumping and running, there is an 90% chance of falling (Customizable)\
 **Anti air control** - Disable air control with vehicles\
-**PVP Enabled** - Enables PVP on your server\
+**PVP Enabled** - Enables PVP on your server
 
 
 # How to install:
 Add the **RPCore** folder to your FiveM resources directory.\
 Edit your server.cfg and add "ensure **RPCore**"\
-Edit config.lua to be customized for your server.\
+Edit config.lua to be customized for your server.
 
 
 
