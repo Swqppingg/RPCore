@@ -34,4 +34,4 @@ Edit config.lua to be customized for your server.
 
 
 
-If you have any issues or suggestions please put them below.
+https://i.imgur.com/GU3LSL2.png
