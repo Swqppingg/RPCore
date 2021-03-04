@@ -34,5 +34,5 @@ Edit config.lua to be customized for your server.\
 
 
 
-
+---------------------------------------------------
 ![banner](https://i.imgur.com/GU3LSL2.png)
