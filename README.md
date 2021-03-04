@@ -35,3 +35,12 @@ Edit config.lua to be customized for your server.
 
 
 ![Screenshot](https://i.imgur.com/GU3LSL2.png)
+
+
+
+
+- [ ] Cuff script
+- [ ] delallveh command
+- [ ] Emotes
+- [ ] Ingame Logs maybe?
+- [ ] /freeze command
