@@ -39,8 +39,11 @@ Edit config.lua to be customized for your server.
 
 
 **Todo:**
-- [ ] Cuff script
+- [ ] Cuff command
 - [ ] delallveh command
 - [ ] Emotes
 - [ ] Ingame Logs maybe?
 - [ ] /freeze command
+- [ ] Discord Rich Presence
+- [ ] afk kick
+- [ ] move discord webhook to server.lua
