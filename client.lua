@@ -10,7 +10,7 @@ local numRetries = 5
 
 RegisterNetEvent( "RPCore:deleteVehicle" )
 AddEventHandler( "RPCore:deleteVehicle", function()
-    local ped = GetPlayerPed( -1 )
+    local ped = PlayerPedId()
 
     if ( DoesEntityExist( ped ) and not IsEntityDead( ped ) ) then 
         local pos = GetEntityCoords( ped )
@@ -95,11 +95,11 @@ Citizen.CreateThread(function()
 		Citizen.Wait(0)
 		if IsControlJustPressed(1, 323) then --Start holding X
             if not handsup then
-                TaskPlayAnim(GetPlayerPed(-1), dict, "handsup_enter", 8.0, 8.0, -1, 50, 0, false, false, false)
+                TaskPlayAnim(PlayerPedId(), dict, "handsup_enter", 8.0, 8.0, -1, 50, 0, false, false, false)
                 handsup = true
             else
                 handsup = false
-                ClearPedTasks(GetPlayerPed(-1))
+                ClearPedTasks(PlayerPedId())
             end
         end
     end
@@ -230,7 +230,7 @@ if Config.crouch then
     Citizen.CreateThread( function()
         while true do 
             Citizen.Wait( 1 )
-            local ped = GetPlayerPed( -1 )
+            local ped = PlayerPedId()
             if ( DoesEntityExist( ped ) and not IsEntityDead( ped ) and not IsPedInAnyVehicle(ped) ) then 
                 DisableControlAction( 0, 36, true )
                 if ( not IsPauseMenuActive() ) then 
@@ -309,7 +309,7 @@ end
     end 
     
     function ManageReticle()
-        local ped = GetPlayerPed( -1 )
+        local ped = PlayerPedId()
     
         if ( DoesEntityExist( ped ) and not IsEntityDead( ped ) ) then
             local _, hash = GetCurrentPedWeapon( ped, true )
@@ -357,7 +357,7 @@ end
     Citizen.CreateThread(function()
         while true do
             Citizen.Wait(0)
-            local ped = GetPlayerPed(-1)
+            local ped = PlayerPedId()
                 if HasEntityBeenDamagedByAnyPed(ped) then
                         Disarm(ped)
                 end
@@ -389,7 +389,7 @@ end
                 
     
                 boneCoords = GetWorldPositionOfEntityBone(ped, GetPedBoneIndex(ped, bone))
-                SetPedToRagdoll(GetPlayerPed(-1), 5000, 5000, 0, 0, 0, 0)
+                SetPedToRagdollPlayerPedId(), 5000, 5000, 0, 0, 0, 0)
                 
     
                 return true
@@ -417,7 +417,7 @@ end
     local keyPressed = false
     
     local function startPointing()
-        local ped = GetPlayerPed(-1)
+        local ped = PlayerPedId()
         RequestAnimDict("anim@mp_point")
         while not HasAnimDictLoaded("anim@mp_point") do
             Wait(0)
@@ -429,7 +429,7 @@ end
     end
     
     local function stopPointing()
-        local ped = GetPlayerPed(-1)
+        local ped = PlayerPedId()
         Citizen.InvokeNative(0xD01015C7316AE176, ped, "Stop")
         if not IsPedInjured(ped) then
             ClearPedSecondaryTask(ped)
@@ -485,7 +485,7 @@ end
                 if not IsPedOnFoot(PlayerPedId()) then
                     stopPointing()
                 else
-                    local ped = GetPlayerPed(-1)
+                    local ped = PlayerPedId()
                     local camPitch = GetGameplayCamRelativePitch()
                     if camPitch < -70.0 then
                         camPitch = -70.0
@@ -602,7 +602,7 @@ if Config.afkkick then
 Citizen.CreateThread(function()
 	while true do
 		Wait(1000)
-		playerPed = GetPlayerPed(-1)
+		playerPed = PlayerPedId()
 		if playerPed then
 			currentPos = GetEntityCoords(playerPed, true)
 			if currentPos == prevPos then
