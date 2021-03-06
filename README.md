@@ -20,8 +20,6 @@ If you already have one of the scripts, you can easily disable it in the config.
 **No Grip** - When jumping and running, there is an 90% chance of falling (Customizable)\
 **Anti air control** - Disable air control with vehicles\
 **PVP Enabled** - Enables PVP on your server
-**Delallveh** - Delete all vehicles on the server
-**AFK Kick** - Kick AFK players
 
 # :inbox_tray: Download
 [Download via Github](https://github.com/Swqppingg/RPCore)
@@ -42,10 +40,10 @@ Edit config.lua to be customized for your server.
 
 **Todo:**
 - [ ] Cuff command
-- [ ] delallveh command
+- [x] delallveh command
 - [ ] Emotes
 - [ ] Ingame Logs maybe?
 - [ ] /freeze command
 - [ ] Discord Rich Presence
-- [ ] afk kick
+- [x] afk kick
 - [ ] move discord webhook to server.lua

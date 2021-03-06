@@ -202,9 +202,21 @@ end
         return count
     end
 --------------------------------------------------------------------------------------------------------------
-
-
-
+-- AFK Kick Script --
+if Config.afkkick then
+RegisterServerEvent("RPCore:afkkick")
+AddEventHandler("RPCore:afkkick", function()
+	DropPlayer(source, Config.afkkickmessage)
+end)
+end
+------------------------------------------------------------------------------
+-- Delallveh Script --
+if Config.delallveh then
+RegisterCommand(Config.commandname, function(source, args, rawCommand) 
+	TriggerClientEvent("RPCore:delallveh", -1) 
+end, Config.restrictcommand)
+end
+-------------------------------------------------
 
 
 

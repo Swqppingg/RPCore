@@ -19,6 +19,8 @@ Config.serverlistuptime = true -- Adds a server convar with the server uptime
 Config.nogrip = true -- When jumping and running, there is an 90% chance of falling (Customizable)
 Config.antiaircontrol = true -- Disable air control with vehicles
 Config.pvp = true -- Enable pvp
+Config.afkkick = true -- Kick players for being AFK
+Config.delallveh = true -- Delete all vehicles on the map
 
 -- Customize the Antiswear script here --
 
@@ -70,8 +72,27 @@ Config.ragdoll_chance = 0.8 -- Edit this decimal value for chance of falling (e.
 
 
 
+-- Customize the AFK Kick script here --
+
+Config.secondsuntilkick = 600 -- AFK Kick Time Limit (in seconds)
+Config.kickwarning = true -- Warn players if 3/4 of the Time Limit ran up
+-- Edit Warning message before getting kicked in client.lua line 609
+Config.afkkickmessage = "You were kicked for being AFK for too long."
+
+
+
+
+-- Customize the delallveh script here --
+
+Config.deletemessage = "^1SYSTEM^0: ^7All unoccupied vehicles have been deleted by a staff member to reduce the amount of server lag and texture loss."
+Config.commandname = "delallveh" -- This is the command that you will type into chat to execute the script.
+Config.restrictcommand = true
+-- Setting this to false will allow anyone in the server to use the command. 
+-- If you set it to true you will need to add a ace perm to allow people to use it.
+-- Such as add_ace [GROUP] command.[commandName] allow
+
 
 
 
 Config.versionchecker = true -- Set to false to disable version checker
-Config.versionCheck = "1.0.0"
+Config.versionCheck = "1.0.1"

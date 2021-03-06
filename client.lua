@@ -594,3 +594,48 @@ AddEventHandler("playerSpawned", function()
     SetCanAttackFriendly(PlayerPedId(), true, true)
 end)
 end
+--------------------------------------------------------------------------------
+-- AFK Kick Script
+if Config.afkkick then
+Citizen.CreateThread(function()
+	while true do
+		Wait(1000)
+		playerPed = GetPlayerPed(-1)
+		if playerPed then
+			currentPos = GetEntityCoords(playerPed, true)
+			if currentPos == prevPos then
+				if time > 0 then
+					if Config.kickwarning and time == math.ceil(Config.secondsuntilkick / 4) then
+						TriggerEvent("chatMessage", "WARNING", {255, 0, 0}, "^1You'll be kicked in " .. time .. " seconds for being AFK!")
+					end
+					time = time - 1
+				else
+					TriggerServerEvent("RPCore:afkkick")
+				end
+			else
+				time = Config.secondsuntilkick
+			end
+			prevPos = currentPos
+		end
+	end
+end)
+end
+------------------------------------------------------------------------------
+-- Delallveh Script
+if Config.delallveh then
+RegisterNetEvent("RPCore:delallveh")
+AddEventHandler("RPCore:delallveh", function ()
+    TriggerEvent('chatMessage', Config.deletemessage)
+    local totalvehc = 0
+    local notdelvehc = 0
+
+    for vehicle in EnumerateVehicles() do
+        if (not IsPedAPlayer(GetPedInVehicleSeat(vehicle, -1))) then SetVehicleHasBeenOwnedByPlayer(vehicle, false) SetEntityAsMissionEntity(vehicle, false, false) DeleteVehicle(vehicle)
+            if (DoesEntityExist(vehicle)) then DeleteVehicle(vehicle) end
+            if (DoesEntityExist(vehicle)) then notdelvehc = notdelvehc + 1 end
+        end
+        totalvehc = totalvehc + 1 
+    end
+end)
+end
+--------------------------------------------------------------------------
