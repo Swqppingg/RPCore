@@ -19,10 +19,8 @@ If you already have one of the scripts, you can easily disable it in the config.
 **Server List Uptime** - Adds a server convar with the server uptime\
 **No Grip** - When jumping and running, there is an 90% chance of falling (Customizable)\
 **Anti air control** - Disable air control with vehicles\
-**PVP Enabled** - Enables PVP on your server
-**Delallveh** - Delete all vehicles on the server
-**AFK Kick** - Kick AFK players
-**Delallveh** - Delete all vehicles on the server
+**PVP Enabled** - Enables PVP on your server\
+**Delallveh** - Delete all vehicles on the server\
 **AFK Kick** - Kick AFK players
 
 # :inbox_tray: Download
