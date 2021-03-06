@@ -539,6 +539,7 @@ end)
 end
 end
 -- Chat suggestions for RPCommands
+if Config.rpcommands then
 Citizen.CreateThread(function()
    TriggerEvent('chat:addSuggestion', '/twt', 'Tweet something')
    TriggerEvent('chat:addSuggestion', '/dispatch', 'Dispatch')
@@ -549,6 +550,7 @@ Citizen.CreateThread(function()
    TriggerEvent('chat:addSuggestion', '/me', 'Player action')
    TriggerEvent('chat:addSuggestion', '/showid', 'Show your first name and last name')
 end)
+end
 ------------------------------------------------------------------------------------------------
 -- NoGrip Script
 if Config.nogrip then
