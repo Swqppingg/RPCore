@@ -278,6 +278,7 @@ Citizen.CreateThread(
 RPCore
 UPDATE: %s AVAILABLE
 CHANGELOG: %s
+DOWNLOAD: https://github.com/Swqppingg/RPCore
 -------------------------------------------------------
 ^0]]):format(
 									rv.version,
