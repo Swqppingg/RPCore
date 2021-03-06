@@ -22,6 +22,8 @@ If you already have one of the scripts, you can easily disable it in the config.
 **PVP Enabled** - Enables PVP on your server
 **Delallveh** - Delete all vehicles on the server
 **AFK Kick** - Kick AFK players
+**Delallveh** - Delete all vehicles on the server
+**AFK Kick** - Kick AFK players
 
 # :inbox_tray: Download
 [Download via Github](https://github.com/Swqppingg/RPCore)
