@@ -389,7 +389,7 @@ end
                 
     
                 boneCoords = GetWorldPositionOfEntityBone(ped, GetPedBoneIndex(ped, bone))
-                SetPedToRagdollPlayerPedId(), 5000, 5000, 0, 0, 0, 0)
+                SetPedToRagdoll(PlayerPedId(), 5000, 5000, 0, 0, 0, 0)
                 
     
                 return true
