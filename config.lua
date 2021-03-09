@@ -98,4 +98,4 @@ Config.restrictcommand = true
 
 
 Config.versionchecker = true -- Set to false to disable version checker
-Config.versionCheck = "1.0.1"
+Config.versionCheck = "1.0.2"
