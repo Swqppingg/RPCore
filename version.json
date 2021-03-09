@@ -1,5 +1,5 @@
 {
-	"date": "March 5, 2021",
+	"date": "March 9, 2021",
 	"version": "1.0.2",
-	"changelog": "Added chat suggestions to RPCommands, Optimized tazer effect, Added delallveh script, Added afk kick script"
+	"changelog": "Moved RPCommands discord webhook to server.lua to prevent modders from getting it"
 }
