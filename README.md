@@ -48,4 +48,4 @@ Edit config.lua to be customized for your server.
 - [ ] /freeze command
 - [ ] Discord Rich Presence
 - [x] afk kick
-- [ ] move discord webhook to server.lua
+- [x] move discord webhook to server.lua
