@@ -19,7 +19,7 @@ Config.serverlistuptime = true -- Adds a server convar with the server uptime
 Config.nogrip = true -- When jumping and running, there is an 90% chance of falling (Customizable)
 Config.antiaircontrol = true -- Disable air control with vehicles
 Config.pvp = true -- Enable pvp
-Config.afkkick = true -- Kick players for being AFK
+Config.afkkick = false -- Kick players for being AFK
 Config.delallveh = true -- Delete all vehicles on the map
 
 -- Customize the Antiswear script here --
@@ -61,7 +61,10 @@ Config.ooc = true -- /ooc command?
 Config.me = true -- /me command?
 Config.showid = true -- /showid command?
 Config.missingargs = '^1Please provide a message.' -- Send this message when a player didn't provide a message
-Config.rpcommandswebhook = 'WEBHOOK_HERE' -- Change this webhook to where you want the command logging to be
+-- [!] CHANGE THE WEBHOOK IN SERVER.LUA AT THE TOP
+-- [!] CHANGE THE WEBHOOK IN SERVER.LUA AT THE TOP
+-- [!] CHANGE THE WEBHOOK IN SERVER.LUA AT THE TOP
+-- [!] CHANGE THE WEBHOOK IN SERVER.LUA AT THE TOP
 
 
 

@@ -1,3 +1,10 @@
+-- RPCommands Discord Webhook
+rpcommandswebhook = 'WEBHOOK_HERE' -- Change this webhook to where you want the RPCommands logging to be
+
+
+---------------------------------------------
+
+
 -- Antiswear
 if Config.antiswear then
 AddEventHandler('chatMessage', function(source, n, message)
@@ -58,7 +65,7 @@ if Config.twitter then
             local steam = GetPlayerName(source)
             args = table.concat(args, ' ')
             TriggerClientEvent('chatMessage', -1, "TWITTER | ".. GetPlayerName(source) .."", { 30, 144, 255 }, message)
-            PerformHttpRequest(Config.rpcommandswebhook, function(err, text, headers) end, 'POST', json.encode({username = steam, content = "**TWITTER:** ".. message .."", avatar_url = DISCORD_IMAGE}), { ['Content-Type'] = 'application/json' })
+            PerformHttpRequest(rpcommandswebhook, function(err, text, headers) end, 'POST', json.encode({username = steam, content = "**TWITTER:** ".. message .."", avatar_url = DISCORD_IMAGE}), { ['Content-Type'] = 'application/json' })
         end
     end)
     end
@@ -73,7 +80,7 @@ end
             else
             local message = table.concat(args, " ")
             TriggerClientEvent('chatMessage', -1, "Dispatch | ".. GetPlayerName(source) .."", { 30, 144, 255 }, message)
-            PerformHttpRequest(Config.rpcommandswebhook, function(err, text, headers) end, 'POST', json.encode({username = steam, content = "**DISPATCH:** ".. message .."", avatar_url = DISCORD_IMAGE}), { ['Content-Type'] = 'application/json' })
+            PerformHttpRequest(rpcommandswebhook, function(err, text, headers) end, 'POST', json.encode({username = steam, content = "**DISPATCH:** ".. message .."", avatar_url = DISCORD_IMAGE}), { ['Content-Type'] = 'application/json' })
         end
     end)
     end
@@ -90,7 +97,7 @@ end
             local steam = GetPlayerName(source)
             args = table.concat(args, ' ')
             TriggerClientEvent('chatMessage', -1, "Dark Web", { 33, 33, 38 }, message)
-            PerformHttpRequest(Config.rpcommandswebhook, function(err, text, headers) end, 'POST', json.encode({username = steam, content = "**DARKWEB:** ".. message .."", avatar_url = DISCORD_IMAGE}), { ['Content-Type'] = 'application/json' })
+            PerformHttpRequest(rpcommandswebhook, function(err, text, headers) end, 'POST', json.encode({username = steam, content = "**DARKWEB:** ".. message .."", avatar_url = DISCORD_IMAGE}), { ['Content-Type'] = 'application/json' })
         end
     end)
     end
@@ -107,7 +114,7 @@ end
             local steam = GetPlayerName(source)
             args = table.concat(args, ' ')
             TriggerClientEvent('chatMessage', -1, "NEWS | ".. GetPlayerName(source) .."", { 194, 255, 51 }, message)
-            PerformHttpRequest(Config.rpcommandswebhook, function(err, text, headers) end, 'POST', json.encode({username = steam, content = "**NEWS:** ".. message .."", avatar_url = DISCORD_IMAGE}), { ['Content-Type'] = 'application/json' })
+            PerformHttpRequest(rpcommandswebhook, function(err, text, headers) end, 'POST', json.encode({username = steam, content = "**NEWS:** ".. message .."", avatar_url = DISCORD_IMAGE}), { ['Content-Type'] = 'application/json' })
         end
     end)
     end
@@ -121,7 +128,7 @@ end
             else
             local message = table.concat(args, " ")
             TriggerClientEvent('chatMessage', -1, "Do | ".. GetPlayerName(source) .."", { 51, 153, 255 }, message)
-            PerformHttpRequest(Config.rpcommandswebhook, function(err, text, headers) end, 'POST', json.encode({username = steam, content = "**DO:** ".. message .."", avatar_url = DISCORD_IMAGE}), { ['Content-Type'] = 'application/json' })
+            PerformHttpRequest(rpcommandswebhook, function(err, text, headers) end, 'POST', json.encode({username = steam, content = "**DO:** ".. message .."", avatar_url = DISCORD_IMAGE}), { ['Content-Type'] = 'application/json' })
         end
     end)
     end
@@ -138,7 +145,7 @@ end
             local steam = GetPlayerName(source)
             args = table.concat(args, ' ')
             TriggerClientEvent('chatMessage', -1, "OOC | ".. GetPlayerName(source) .."", { 128, 128, 128 }, message)
-            PerformHttpRequest(Config.rpcommandswebhook, function(err, text, headers) end, 'POST', json.encode({username = steam, content = "**OOC:** ".. message .."", avatar_url = DISCORD_IMAGE}), { ['Content-Type'] = 'application/json' })
+            PerformHttpRequest(rpcommandswebhook, function(err, text, headers) end, 'POST', json.encode({username = steam, content = "**OOC:** ".. message .."", avatar_url = DISCORD_IMAGE}), { ['Content-Type'] = 'application/json' })
         end
     end)
     end
@@ -154,7 +161,7 @@ end
             local steam = GetPlayerName(source)
             args = table.concat(args, ' ')
             TriggerClientEvent('chatMessage', -1, "Me | ".. GetPlayerName(source) .."", { 255, 0, 0 }, message)
-            PerformHttpRequest(Config.rpcommandswebhook, function(err, text, headers) end, 'POST', json.encode({username = steam, content = "**ME:** ".. message .."", avatar_url = DISCORD_IMAGE}), { ['Content-Type'] = 'application/json' })
+            PerformHttpRequest(rpcommandswebhook, function(err, text, headers) end, 'POST', json.encode({username = steam, content = "**ME:** ".. message .."", avatar_url = DISCORD_IMAGE}), { ['Content-Type'] = 'application/json' })
         end
     end)
     end
@@ -171,7 +178,7 @@ end
                 local lastname = tostring(cm[3])
                 local steam = GetPlayerName(source)
                 TriggerClientEvent("RPCore:sendMessageShowID", -1, source, firstname, lastname)
-                PerformHttpRequest(Config.rpcommandswebhook, function(err, text, headers) end, 'POST', json.encode({username = steam, content = '**ShowID** | **First Name:** ' .. firstname .. ' **Last Name:** ' .. lastname .. '', avatar_url = DISCORD_IMAGE}), { ['Content-Type'] = 'application/json' })
+                PerformHttpRequest(rpcommandswebhook, function(err, text, headers) end, 'POST', json.encode({username = steam, content = '**ShowID** | **First Name:** ' .. firstname .. ' **Last Name:** ' .. lastname .. '', avatar_url = DISCORD_IMAGE}), { ['Content-Type'] = 'application/json' })
                 
             else
                 TriggerClientEvent('chatMessage', source, "Use the following format:", {255, 0, 0}, "/showid [First Name] [Last Name]")
