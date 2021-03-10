@@ -1,0 +1,5 @@
+{
+	"date": "March 9, 2021",
+	"version": "1.0.2",
+	"changelog": "Moved RPCommands discord webhook to server.lua to prevent modders from getting it and added more scripts"
+}
