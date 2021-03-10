@@ -1,5 +1,8 @@
-if Config.deleteveh then
+
+
+
 -- DeleteVehicle Command --
+if Config.deleteveh then
 RegisterCommand( "dv", function()
     TriggerEvent( "RPCore:deleteVehicle" )
 end, false )
@@ -78,9 +81,7 @@ function Notify( text )
     DrawNotification( false, false )
 end
 end
-
--------------------------------------------------------------------------------------------------------------
-
+------------------------------------------------------------------
 -- Hands up script
 if Config.handsup then
 Citizen.CreateThread(function()
@@ -105,7 +106,7 @@ Citizen.CreateThread(function()
     end
 end)
 end
----------------------------------------------------------------------------------------
+------------------------------------------------------------------
 -- Watermark script
 
 if Config.watermark then
@@ -125,7 +126,7 @@ Citizen.CreateThread(function()
 	end
 end)
 end
---------------------------------------------------------------
+------------------------------------------------------------------
 -- Drag script
 if Config.drag then
 local Drag = {
@@ -222,7 +223,7 @@ Citizen.CreateThread(function()
 	end
 end)
 end
--------------------------------------------------------------------
+------------------------------------------------------------------
 -- Crouch script
 if Config.crouch then
     local crouched = false
@@ -252,8 +253,8 @@ if Config.crouch then
         end
     end)
     end
-    -----------------------------------------------------------------------------------
-    -- Tazer effect
+------------------------------------------------------------------
+-- Tazer effect
     if Config.tazereffect then
 local isTaz = false
 Citizen.CreateThread(function()
@@ -288,8 +289,8 @@ Citizen.CreateThread(function()
 	end
 end)
 end
-    -------------------------------------------------------------------------
-    -- No reticle
+------------------------------------------------------------------
+-- No reticle
     if Config.noreticle then
     local scopedWeapons = 
     {
@@ -329,8 +330,8 @@ end
         end 
     end)
     end
-    ------------------------------------------------------------------------------------
-    -- Damage ragdoll script
+------------------------------------------------------------------
+-- Damage ragdoll script
     
     if Config.damageragdoll then
     local BONES = {
@@ -399,8 +400,8 @@ end
         return false
     end
     end
-    --------------------------------------------------------------------------
-    -- Disable combat roll script
+------------------------------------------------------------------
+-- Disable combat roll script
     if Config.disablecombatroll then
     Citizen.CreateThread(function()
         while true do
@@ -410,8 +411,8 @@ end
             end
         end
     end)
-    -------------------------------------------------------------------------------------
-    -- Finger point script
+------------------------------------------------------------------
+-- Finger point script
     if Config.fingerpoint then
     local mp_pointing = false
     local keyPressed = false
@@ -522,7 +523,7 @@ end
     end)
 end
 end
-----------------------------------------------------------------------------------------------
+------------------------------------------------------------------
 -- ShowID Command
 if Config.rpcommands then
     if Config.showid then
@@ -551,7 +552,7 @@ Citizen.CreateThread(function()
    TriggerEvent('chat:addSuggestion', '/showid', 'Show your first name and last name')
 end)
 end
-------------------------------------------------------------------------------------------------
+------------------------------------------------------------------
 -- NoGrip Script
 if Config.nogrip then
 Citizen.CreateThread(function()
@@ -571,7 +572,7 @@ Citizen.CreateThread(function()
 	end
 end)
 end
---------------------------------------------------------------------------------------------------------
+------------------------------------------------------------------
 -- Anti air control script
 if Config.antiaircontrol then
 Citizen.CreateThread(function()
@@ -588,7 +589,7 @@ Citizen.CreateThread(function()
     end
 end)
 end
--------------------------------------------------------------------------------------------
+------------------------------------------------------------------
 -- PVP Script
 if Config.pvp then
 AddEventHandler("playerSpawned", function()
@@ -596,12 +597,12 @@ AddEventHandler("playerSpawned", function()
     SetCanAttackFriendly(PlayerPedId(), true, true)
 end)
 end
---------------------------------------------------------------------------------
+------------------------------------------------------------------
 -- AFK Kick Script
 if Config.afkkick then
 Citizen.CreateThread(function()
 	while true do
-		Wait(1000)
+		Citizen.Wait(1000)
 		playerPed = PlayerPedId()
 		if playerPed then
 			currentPos = GetEntityCoords(playerPed, true)
@@ -622,7 +623,7 @@ Citizen.CreateThread(function()
 	end
 end)
 end
-------------------------------------------------------------------------------
+------------------------------------------------------------------
 -- Delallveh Script
 if Config.delallveh then
 RegisterNetEvent("RPCore:delallveh")
@@ -640,4 +641,35 @@ AddEventHandler("RPCore:delallveh", function ()
     end
 end)
 end
---------------------------------------------------------------------------
+------------------------------------------------------------------
+-- Never wanted script --
+if Config.neverwanted then
+    Citizen.CreateThread(function()
+        while true do
+            Citizen.Wait(10)
+            for i = 1, 12 do
+                EnableDispatchService(i, false)
+            end
+            SetPlayerWantedLevel(PlayerId(), 0, false)
+            SetPlayerWantedLevelNow(PlayerId(), false)
+            SetPlayerWantedLevelNoDrop(PlayerId(), 0, false)
+        end
+    end
+    end)
+------------------------------------------------------------------
+-- Remove parked vehicles --
+if Config.removeparkedvehicles then
+Citizen.CreateThread(function()
+    while true do
+        Citizen.Wait(10)
+
+		SetParkedVehicleDensityMultiplierThisFrame(0.0)
+		local playerPed = PlayerPedId()
+		local pos = GetEntityCoords(playerPed) 
+		RemoveVehiclesFromGeneratorsInArea(pos['x'] - 500.0, pos['y'] - 500.0, pos['z'] - 500.0, pos['x'] + 500.0, pos['y'] + 500.0, pos['z'] + 500.0);
+		SetGarbageTrucks(0)
+		SetRandomBoats(0)
+	end
+end
+end)
+------------------------------------------------------------------

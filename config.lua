@@ -21,6 +21,8 @@ Config.antiaircontrol = true -- Disable air control with vehicles
 Config.pvp = true -- Enable pvp
 Config.afkkick = false -- Kick players for being AFK
 Config.delallveh = true -- Delete all vehicles on the map
+Config.neverwanted = true -- Disable wanted level and emergency services
+Config.removeparkedvehicles = true -- Removes all parked vehicles
 
 -- Customize the Antiswear script here --
 
@@ -79,7 +81,7 @@ Config.ragdoll_chance = 0.8 -- Edit this decimal value for chance of falling (e.
 
 Config.secondsuntilkick = 600 -- AFK Kick Time Limit (in seconds)
 Config.kickwarning = true -- Warn players if 3/4 of the Time Limit ran up
--- Edit Warning message before getting kicked in client.lua line 609
+-- Edit Warning message before getting kicked in client.lua line 611
 Config.afkkickmessage = "You were kicked for being AFK for too long."
 
 
