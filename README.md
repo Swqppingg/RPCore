@@ -21,8 +21,8 @@ If you already have one of the scripts, you can easily disable it in the config.
 **Anti air control** - Disable air control with vehicles\
 **PVP Enabled** - Enables PVP on your server\
 **Delallveh** - Delete all vehicles on the server\
-**AFK Kick** - Kick AFK players
-**Never Wanted** - Disable wanted level and emergency services
+**AFK Kick** - Kick AFK players\
+**Never Wanted** - Disable wanted level and emergency services\
 **Remove Parked Vehicles** - Removes all parked vehicles
 
 # :inbox_tray: Download
