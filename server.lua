@@ -266,9 +266,26 @@ end
 
 
 
+local branding = 
+[[ 
+  //
+  ||     _____  _____   _____               
+  ||    |  __ \|  __ \ / ____|              
+  ||    | |__) | |__) | |     ___  _ __ ___ 
+  ||    |  _  /|  ___/| |    / _ \| '__/ _ \
+  ||    | | \ \| |    | |___| (_) | | |  __/
+  ||    |_|  \_\_|     \_____\___/|_|  \___|
+  ||             Made by Swqpping
+  ||
+  ||
+  \\
+  ]]
+
 -- Version Checker
 Citizen.CreateThread(
 	function()
+Citizen.Wait(2500)
+print(branding)
         if Config.versionchecker then
 		local vRaw = LoadResourceFile(GetCurrentResourceName(), 'version.json')
 		if vRaw and Config.versionCheck then
@@ -302,16 +319,3 @@ DOWNLOAD: https://github.com/Swqppingg/RPCore
 		end
 	end
 end)
-
-
-local branding = 
-[[ 
-██████╗ ██████╗  ██████╗ ██████╗ ██████╗ ███████╗
-██╔══██╗██╔══██╗██╔════╝██╔═══██╗██╔══██╗██╔════╝
-██████╔╝██████╔╝██║     ██║   ██║██████╔╝█████╗  
-██╔══██╗██╔═══╝ ██║     ██║   ██║██╔══██╗██╔══╝  
-██║  ██║██║     ╚██████╗╚██████╔╝██║  ██║███████╗
-╚═╝  ╚═╝╚═╝      ╚═════╝ ╚═════╝ ╚═╝  ╚═╝╚══════╝
-]]
-
-print(branding)
