@@ -654,7 +654,6 @@ if Config.neverwanted then
             SetPlayerWantedLevelNow(PlayerId(), false)
             SetPlayerWantedLevelNoDrop(PlayerId(), 0, false)
         end
-    end
     end)
 ------------------------------------------------------------------
 -- Remove parked vehicles --
@@ -670,6 +669,7 @@ Citizen.CreateThread(function()
 		SetGarbageTrucks(0)
 		SetRandomBoats(0)
 	end
-end
 end)
+end
+end
 ------------------------------------------------------------------
