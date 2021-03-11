@@ -36,6 +36,9 @@ Edit config.lua to be customized for your server.
 
 
 
+# :wrench: Support
+Open an issue or join my discord server for support
+https://discord.gg/X3Mb74Phnq
 
 
 ![Screenshot](https://i.imgur.com/GU3LSL2.png)
