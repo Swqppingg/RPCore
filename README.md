@@ -24,6 +24,7 @@ If you already have one of the scripts, you can easily disable it in the config.
 **AFK Kick** - Kick AFK players\
 **Never Wanted** - Disable wanted level and emergency services\
 **Remove Parked Vehicles** - Removes all parked vehicles
+**Auto Messages** - Sends the configurable messages to the player, every x minutes.
 
 # :inbox_tray: Download
 [Download via Github](https://github.com/Swqppingg/RPCore)
@@ -50,7 +51,7 @@ https://discord.gg/X3Mb74Phnq
 - [ ] Cuff command
 - [x] delallveh command
 - [ ] Emotes
-- [ ] Ingame Logs maybe?
+- [ ] Ingame Logs
 - [ ] /freeze command
 - [ ] Discord Rich Presence
 - [x] afk kick
