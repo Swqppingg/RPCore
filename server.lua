@@ -24,7 +24,7 @@ if Config.drag then
 RegisterServerEvent("RPCore:drag")
 AddEventHandler("RPCore:drag", function(Target)
 	local Source = source
-	TriggerClientEvent("RPCore", Target, Source)
+	TriggerClientEvent("RPCore:drag", Target, Source)
 end)
 end
 ------------------------------------------------------------------------
