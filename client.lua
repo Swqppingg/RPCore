@@ -193,7 +193,7 @@ end, false)
 
 Citizen.CreateThread(function()
 	while true do
-		Citizen.Wait(0)
+		Citizen.Wait(10)
 
 		if NetworkIsSessionStarted() then
 			TriggerEvent("chat:addSuggestion", "/drag", "Drag the closest player")
@@ -230,9 +230,9 @@ if Config.crouch then
     
     Citizen.CreateThread( function()
         while true do 
-            Citizen.Wait( 1 )
+            Citizen.Wait(1)
             local ped = PlayerPedId()
-            if ( DoesEntityExist( ped ) and not IsEntityDead( ped ) and not IsPedInAnyVehicle(ped) ) then 
+            if (DoesEntityExist(ped) and not IsEntityDead(ped) and not IsPedInAnyVehicle(ped)) then 
                 DisableControlAction( 0, 36, true )
                 if ( not IsPauseMenuActive() ) then 
                     if ( IsDisabledControlJustPressed( 0, 36 ) ) then 
@@ -259,7 +259,7 @@ if Config.crouch then
 local isTaz = false
 Citizen.CreateThread(function()
 	while true do
-		Citizen.Wait(0)
+		Citizen.Wait(5)
 		ped = PlayerPedId()
 		
 		if IsPedBeingStunned(ped) then
@@ -312,20 +312,20 @@ end
     function ManageReticle()
         local ped = PlayerPedId()
     
-        if ( DoesEntityExist( ped ) and not IsEntityDead( ped ) ) then
-            local _, hash = GetCurrentPedWeapon( ped, true )
+        if ( DoesEntityExist(ped) and not IsEntityDead(ped)) then
+            local _, hash = GetCurrentPedWeapon(ped, true)
     
-            if ( GetFollowPedCamViewMode() ~= 4 and IsPlayerFreeAiming() and not HashInTable( hash ) ) then 
-                HideHudComponentThisFrame( 14 )
+            if ( GetFollowPedCamViewMode() ~= 4 and IsPlayerFreeAiming() and not HashInTable(hash)) then 
+                HideHudComponentThisFrame(14)
             end 
         end 
     end 
     
-    Citizen.CreateThread( function()
+    Citizen.CreateThread(function()
         while true do 
         
-            HideHudComponentThisFrame( 14 )		
-            Citizen.Wait( 0 )
+            HideHudComponentThisFrame(14)		
+            Citizen.Wait(0)
     
         end 
     end)
@@ -577,7 +577,7 @@ end
 if Config.antiaircontrol then
 Citizen.CreateThread(function()
     while true do
-        Citizen.Wait(0)
+        Citizen.Wait(50)
         local veh = GetVehiclePedIsIn(PlayerPedId(), false)
         if DoesEntityExist(veh) and not IsEntityDead(veh) then
             local model = GetEntityModel(veh)
@@ -626,8 +626,11 @@ end
 ------------------------------------------------------------------
 -- Delallveh Script
 if Config.delallveh then
+local delay2 = Config.delay * 1000
 RegisterNetEvent("RPCore:delallveh")
 AddEventHandler("RPCore:delallveh", function ()
+    TriggerEvent('chatMessage', Config.delaymessage)
+    Wait(delay2)
     TriggerEvent('chatMessage', Config.deletemessage)
     local totalvehc = 0
     local notdelvehc = 0
@@ -660,7 +663,7 @@ if Config.neverwanted then
 if Config.removeparkedvehicles then
 Citizen.CreateThread(function()
     while true do
-        Citizen.Wait(10)
+        Citizen.Wait(20)
 
 		SetParkedVehicleDensityMultiplierThisFrame(0.0)
 		local playerPed = PlayerPedId()
@@ -673,3 +676,21 @@ end)
 end
 end
 ------------------------------------------------------------------
+-- Auto Messages Script --
+if Config.automessages then
+local timeout = Config.mdelay * 1000 * 60
+Citizen.CreateThread(function()
+        while true do
+            function chat(i)
+                TriggerEvent('chatMessage', '', {255,255,255}, Config.prefix .. Config.messages[i])
+            end
+            for i in pairs(Config.messages) do
+                    chat(i)
+                Citizen.Wait(timeout)
+            end
+            
+            Citizen.Wait(50)
+        end
+    end)
+end
+--------------------------------------------------------------------------

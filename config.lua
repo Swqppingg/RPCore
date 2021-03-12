@@ -23,6 +23,7 @@ Config.afkkick = false -- Kick players for being AFK
 Config.delallveh = true -- Delete all vehicles on the map
 Config.neverwanted = true -- Disable wanted level and emergency services
 Config.removeparkedvehicles = true -- Removes all parked vehicles
+Config.automessages = false -- Sends the configurable messages to the player, every x minutes.
 
 -- Customize the Antiswear script here --
 
@@ -89,6 +90,8 @@ Config.afkkickmessage = "You were kicked for being AFK for too long."
 
 -- Customize the delallveh script here --
 
+Config.delay = 15 -- Delay before actually deleting all vehicles in seconds
+Config.delaymessage = "^1SYSTEM^0: ^7All unoccupied vehicles will be deleted in ".. Config.delay .. " seconds" -- Message before deleting all vehicles
 Config.deletemessage = "^1SYSTEM^0: ^7All unoccupied vehicles have been deleted by a staff member to reduce the amount of server lag and texture loss."
 Config.commandname = "delallveh" -- This is the command that you will type into chat to execute the script.
 Config.restrictcommand = true
@@ -99,5 +102,14 @@ Config.restrictcommand = true
 
 
 
-Config.versionchecker = true -- Set to false to disable version checker
-Config.versionCheck = "1.0.2"
+
+
+-- Customize the Auto Messages script here --
+
+Config.mdelay = 10 -- Delay in minutes between messages
+Config.prefix = '^1SYSTEM^0: ' -- Prefix appears in front of each message.
+Config.messages = { -- Messages to be sent (You can add unlimited messages)
+    '^0This is a ^2test message',
+	'^0This is a ^3test message',
+	'^0This is a ^4test message'
+}

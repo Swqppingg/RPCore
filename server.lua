@@ -286,7 +286,7 @@ versionChecker = true -- Set to false to disable version checker
 
 -- Don't touch
 resourcename = "RPCore"
-version = "1.0.2"
+version = "1.0.3"
 rawVersionLink = "https://raw.githubusercontent.com/Swqppingg/RPCore/main/version.txt"
 
 -- Check for version updates.
