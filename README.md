@@ -23,7 +23,7 @@ If you already have one of the scripts, you can easily disable it in the config.
 **Delallveh** - Delete all vehicles on the server\
 **AFK Kick** - Kick AFK players\
 **Never Wanted** - Disable wanted level and emergency services\
-**Remove Parked Vehicles** - Removes all parked vehicles
+**Remove Parked Vehicles** - Removes all parked vehicles\
 **Auto Messages** - Sends the configurable messages to the player, every x minutes.
 
 # :inbox_tray: Download
