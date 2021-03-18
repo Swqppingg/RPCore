@@ -64,10 +64,10 @@ Config.ooc = true -- /ooc command?
 Config.me = true -- /me command?
 Config.showid = true -- /showid command?
 Config.missingargs = '^1Please provide a message.' -- Send this message when a player didn't provide a message
--- [!] CHANGE THE WEBHOOK IN SERVER.LUA AT THE TOP
--- [!] CHANGE THE WEBHOOK IN SERVER.LUA AT THE TOP
--- [!] CHANGE THE WEBHOOK IN SERVER.LUA AT THE TOP
--- [!] CHANGE THE WEBHOOK IN SERVER.LUA AT THE TOP
+-- [!] CHANGE THE DISCORD WEBHOOK IN SERVER.LUA AT THE TOP
+-- [!] CHANGE THE DISCORD WEBHOOK IN SERVER.LUA AT THE TOP
+-- [!] CHANGE THE DISCORD WEBHOOK IN SERVER.LUA AT THE TOP
+-- [!] CHANGE THE DISCORD WEBHOOK IN SERVER.LUA AT THE TOP
 
 
 
