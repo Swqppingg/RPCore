@@ -21,7 +21,7 @@ Config.antiaircontrol = true -- Disable air control with vehicles
 Config.pvp = true -- Enable pvp
 Config.afkkick = false -- Kick players for being AFK
 Config.delallveh = true -- Delete all vehicles on the map
-Config.neverwanted = true -- Disable wanted level
+Config.neverwanted = true -- Disable wanted level and emergency services
 Config.removeparkedvehicles = true -- Removes all parked vehicles
 Config.automessages = false -- Sends the configurable messages to the player, every x minutes.
 
