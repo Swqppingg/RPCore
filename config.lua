@@ -13,7 +13,6 @@ Config.crouch = true -- Pressing ctrl makes you crouch
 Config.tazereffect = true -- Gives you an effect when you get tazed
 Config.noreticle = true -- Disables the reticle when aiming
 Config.damageragdoll = true -- Ragdoll when shot
-Config.disablecombatroll = true -- Disables players from using the combat roll action while aiming.
 Config.fingerpoint = true -- Press b to point
 Config.serverlistuptime = true -- Adds a server convar with the server uptime
 Config.nogrip = true -- When jumping and running, there is an 90% chance of falling (Customizable)
@@ -30,15 +29,15 @@ Config.automessages = false -- Sends the configurable messages to the player, ev
 Config.kickplayer = true -- Kick the player if they say a word listed below?
 Config.kickmessage = 'You have been automatically kicked for swearing.' -- Kick message
 Config.wordlist = {
-    "test",
-    "test2"
+    "example",
+    "example2"
 }
 
 
 
 -- Customize the Watermark script here --
 
-Config.servername = "~p~Test Roleplay" -- Watermark text
+Config.servername = "~p~Test ~w~Roleplay" -- Watermark text
 
 -- The x and y offset (starting at the top left corner) --
 Config.offsetX = 0.005

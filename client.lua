@@ -401,17 +401,6 @@ end
     end
     end
 ------------------------------------------------------------------
--- Disable combat roll script
-    if Config.disablecombatroll then
-    Citizen.CreateThread(function()
-        while true do
-            Citizen.Wait(5)
-            if IsControlPressed(0, 25)
-            then DisableControlAction(0, 22, true)
-            end
-        end
-    end)
-------------------------------------------------------------------
 -- Finger point script
     if Config.fingerpoint then
     local mp_pointing = false
