@@ -511,7 +511,6 @@ end
         end
     end)
 end
-end
 ------------------------------------------------------------------
 -- ShowID Command
 if Config.rpcommands then
