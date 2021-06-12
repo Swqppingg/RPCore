@@ -24,7 +24,11 @@ Config.neverwanted = true -- Disable wanted level and emergency services
 Config.removeparkedvehicles = true -- Removes all parked vehicles
 Config.automessages = false -- Sends the configurable messages to the player, every x minutes.
 
--- Customize the Antiswear script here --
+
+
+
+
+-- ANTI SWEAR --
 
 Config.kickplayer = true -- Kick the player if they say a word listed below?
 Config.kickmessage = 'You have been automatically kicked for swearing.' -- Kick message
@@ -35,10 +39,11 @@ Config.wordlist = {
 
 
 
--- Customize the Watermark script here --
+
+
+-- WATERMARK --
 
 Config.servername = "~p~Test ~w~Roleplay" -- Watermark text
-
 -- The x and y offset (starting at the top left corner) --
 Config.offsetX = 0.005
 Config.offsetY = 0.001
@@ -49,7 +54,8 @@ Config.font = 4 -- Text Font, 0 - 5 possible
 
 
 
--- Customize the RPCommands script here --
+
+-- RPCOMMANDS --
 
 -- Note: These commands will not work if rpcommands is set to false.
 -- Enable or disable commands
@@ -63,21 +69,24 @@ Config.ooc = true -- /ooc command?
 Config.me = true -- /me command?
 Config.showid = true -- /showid command?
 Config.missingargs = '^1Please provide a message.' -- Send this message when a player didn't provide a message
--- [!] CHANGE THE DISCORD WEBHOOK IN SERVER.LUA AT THE TOP
--- [!] CHANGE THE DISCORD WEBHOOK IN SERVER.LUA AT THE TOP
--- [!] CHANGE THE DISCORD WEBHOOK IN SERVER.LUA AT THE TOP
--- [!] CHANGE THE DISCORD WEBHOOK IN SERVER.LUA AT THE TOP
+-- [!] CHANGE THE DISCORD WEBHOOK IN SERVER.LUA AT THE TOP TO LOG THE COMMANDS
+-- [!] CHANGE THE DISCORD WEBHOOK IN SERVER.LUA AT THE TOP TO LOG THE COMMANDS
+-- [!] CHANGE THE DISCORD WEBHOOK IN SERVER.LUA AT THE TOP TO LOG THE COMMANDS
+-- [!] CHANGE THE DISCORD WEBHOOK IN SERVER.LUA AT THE TOP TO LOG THE COMMANDS
 
 
 
--- Customize the NoGrip script here --
+
+
+-- NO GRIP --
 
 Config.ragdoll_chance = 0.8 -- Edit this decimal value for chance of falling (e.g. 80% = 0.8    75% = 0.75    32% = 0.32)
 
 
 
 
--- Customize the AFK Kick script here --
+
+-- AFK KICK --
 
 Config.secondsuntilkick = 600 -- AFK Kick Time Limit (in seconds)
 Config.kickwarning = true -- Warn players if 3/4 of the Time Limit ran up
@@ -87,7 +96,8 @@ Config.afkkickmessage = "You were kicked for being AFK for too long."
 
 
 
--- Customize the delallveh script here --
+
+-- DELETE ALL VEHICLES COMMAND --
 
 Config.delay = 15 -- Delay before actually deleting all vehicles in seconds
 Config.delaymessage = "^1SYSTEM^0: ^7All unoccupied vehicles will be deleted in ".. Config.delay .. " seconds" -- Message before deleting all vehicles
@@ -102,8 +112,7 @@ Config.restrictcommand = true
 
 
 
-
--- Customize the Auto Messages script here --
+-- AUTO MESSAGES --
 
 Config.mdelay = 10 -- Delay in minutes between messages
 Config.prefix = '^1SYSTEM^0: ' -- Prefix appears in front of each message.
