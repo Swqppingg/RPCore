@@ -565,7 +565,7 @@ end
 if Config.antiaircontrol then
 Citizen.CreateThread(function()
     while true do
-        Citizen.Wait(50)
+        Citizen.Wait(0)
         local veh = GetVehiclePedIsIn(PlayerPedId(), false)
         if DoesEntityExist(veh) and not IsEntityDead(veh) then
             local model = GetEntityModel(veh)
